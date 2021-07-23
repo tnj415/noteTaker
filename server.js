@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = require('./routes/index.js');
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 const app = express();
 
 app.use(express.json());
