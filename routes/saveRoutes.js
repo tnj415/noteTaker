@@ -3,7 +3,7 @@ const savedNotes = require('../db/db')
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
-router.get('/notes', (req, res) => {
+router.get('/', (req, res) => {
 
   if (req.body && req.params.review_id) {
         
@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
   readFromFile('./db/db.json', 'utf8').then((notes) => res.json(JSON.parse(notes)));
 });
 
-router.post('/notes', (req, res) => {
+router.post('/', (req, res) => {
 
   const { title, text } = req.body;
 
