@@ -4,7 +4,7 @@ const savedNotesRouter = require('./savedNotes');
 
 const app = express();
 
-app.use('/savedNotes', savedNotesRouter);
+app.use('/api', savedNotesRouter);
 
 
 module.exports = app;
