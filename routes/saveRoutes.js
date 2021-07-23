@@ -1,26 +1,20 @@
-const savedNotes = require('express').Router()
+const router = require('express').Router()
+const savedNotes = require('../db/db')
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
-savedNotes.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
 
   if (req.body && req.params.review_id) {
-    console.info(`${req.method} request received to get a single a review`);
-    const reviewId = req.params.review_id;
-    for (let i = 0; i < reviews.length; i++) {
-      const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId) {
-        res.json(currentReview);
-        return;
-      }
-    }
-    res.json('Review ID not found');
+        
+        return res.json(currentNote);
+
   }
 
   readFromFile('./db/db.json', 'utf8').then((notes) => res.json(JSON.parse(notes)));
 });
 
-savedNotes.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
 
   const { title, text } = req.body;
 
@@ -45,4 +39,4 @@ savedNotes.post('/api/notes', (req, res) => {
 
 });
 
-module.exports = savedNotes;
+module.exports = router;
