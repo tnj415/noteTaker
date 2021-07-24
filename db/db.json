@@ -1,32 +1,22 @@
 [
     {
-        "title": "Test",
-        "text": "testing",
-        "id": "123456789"
+        "title": "favorite songs",
+        "text": "-song 1\n-song2\n-song3",
+        "id": "346c"
     },
     {
-        "title": "dfg",
-        "text": "dfg",
-        "id": "d5cf"
+        "title": "Groceries",
+        "text": "-eggs\n-milk\n-butter\n-bread",
+        "id": "0ba0"
     },
     {
-        "title": "dfg",
-        "text": "gdfg",
-        "id": "d1da"
+        "title": "another note",
+        "text": "note content\nnote content\nnote content\nnote content",
+        "id": "2c29"
     },
     {
-        "title": "jkl",
-        "text": "uuio",
-        "id": "8301"
-    },
-    {
-        "title": "troy",
-        "text": "ytttt",
-        "id": "cbca"
-    },
-    {
-        "title": "ggg",
-        "text": "ggg",
-        "id": "4f68"
+        "title": "Thank you!",
+        "text": ":)",
+        "id": "aac1"
     }
 ]
